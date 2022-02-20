@@ -14,8 +14,6 @@ const User = require("./models/user");
 const MONGODB_URI =
   "mongodb+srv://Jokanola:Jokanola_2000@cluster0.0shsx.mongodb.net/store";
 
-
-  
 const app = express();
 const store = new MongoDBStore({
   uri: MONGODB_URI,
@@ -50,6 +48,7 @@ app.use((req, res, next) => {
   User.findById(req.session.user._id)
     .then((user) => {
       req.user = user;
+
       next();
     })
     .catch((err) => console.log(err));

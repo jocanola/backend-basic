@@ -1,0 +1,18 @@
+<%- include('../includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/forms.css">
+    <link rel="stylesheet" href="/css/auth.css">
+</head>
+
+<body>
+   <%- include('../includes/navigation.ejs') %>
+
+    <main>
+        
+        <form class="login-form" action="/expire-token" method="POST">
+                <div class="centered">
+                     <h1 cla>Your password reset link has expired</h1>
+                <a href="/reset">Request Another</a>
+            </div>
+        </form>
+    </main>
+<%- include('../includes/end.ejs') %>
